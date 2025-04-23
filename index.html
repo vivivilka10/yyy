@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра "Угадай число"</title>
+    <meta property="og:title" content="Угадай число">
+    <meta property="og:description" content="Проверьте свою удачу и попробуйте угадать загаданное число.">
+    <meta property="og:image" content="scale_1200.jpeg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Квест по безопасности">
+    <meta name="twitter:description" content="Проверьте свою удачу и попробуйте угадать загаданное число.">
+    <meta name="twitter:image" content="scale_1200.jpegscale_1200.jpeg">
+
+    <style>
+        /* Добавляем фоновое изображение */
+        body {
+            background-color: rgb(207, 252, 255); /* Укажите путь к вашему изображению */
+            background-size: cover;                  /* Растягивает изображение на весь экран */
+            background-position: center;             /* Центрируем изображение */
+            background-repeat: no-repeat;            /* Изображение не повторяется */
+            font-family: Arial, sans-serif;
+                text-align: center;
+            /*margin-top: 50px;*/
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+        #result {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<script src="game.js"></script>
+<h1>Игра "Угадай число"</h1>
+<p>У вас есть 6 попыток, чтобы угадать число от 1 до 100!</p>
+<input type="number" id="inputGuess" placeholder="Введите число..." min="1" max="100"/>
+<br><br>
+<button onclick="checkGuess()">Проверить</button>
+<button onclick="restartGame()">Перезапустить игру</button>
+<div id="result"></div>
+<div id="attempts">Оставшиеся попытки: <span id="remainingAttempts">6</span></div>
+<div id="time">Осталось времени: <span id="timeRemaining">120</span> секунд</div>
+</body>
+</html>
